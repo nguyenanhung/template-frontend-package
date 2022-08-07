@@ -71,4 +71,26 @@ class Database extends BaseCore
 
         return $DB;
     }
+
+    /**
+     * Function checkExitsRecord
+     *
+     * @param $wheres
+     * @param $tableName
+     *
+     * @return bool
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 07/08/2022 17:45
+     */
+    public function checkExitsRecord($wheres, $tableName): bool
+    {
+        $DB = $this->connection();
+        $DB->setTable($tableName);
+        $result = $DB->checkExists($wheres);
+        $DB->disconnect();
+        unset($DB);
+
+        return $result === 1;
+    }
 }
