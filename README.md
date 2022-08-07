@@ -40,15 +40,15 @@ Finally, your edit file `composer.json` in root folder of project
         "ext-json": "*",
         "ext-mbstring": "*",
         "symfony/polyfill": "^1.26",
-        "nguyenanhung/my-debug": "^3.0",
-        "nguyenanhung/my-cache": "^3.0",
-        "nguyenanhung/database": "^3.0",
-        "nguyenanhung/security": "^3.0",
-        "nguyenanhung/requests": "^3.0",
-        "nguyenanhung/monitor": "^3.0",
-        "nguyenanhung/image": "^3.0",
-        "nguyenanhung/helpers": "^3.0",
-        "nguyenanhung/seo": "^3.0",
+        "nguyenanhung/my-debug": "^3.0 || ^2.0",
+        "nguyenanhung/my-cache": "^3.0 || ^2.0",
+        "nguyenanhung/database": "^3.0 || ^2.0",
+        "nguyenanhung/security": "^3.0 || ^2.0",
+        "nguyenanhung/requests": "^3.0 || ^2.0",
+        "nguyenanhung/monitor": "^3.0 || ^2.0",
+        "nguyenanhung/image": "^3.0 || ^2.0",
+        "nguyenanhung/helpers": "^3.0 || ^2.0",
+        "nguyenanhung/seo": "^3.0 || ^2.0",
         "nguyenanhung/web-builder-helper": "^1.0",
         "nguyenanhung/web-builder-templates": "^1.0"
     },
@@ -64,7 +64,6 @@ Finally, your edit file `composer.json` in root folder of project
         ]
     }
 }
-
 ```
 
 Replace name space `Your_Project` to Project Backend space, example: `Google`. After change namespace, project namespace same `"nguyenanhung\\Frontend\\Google\\": "src/"`

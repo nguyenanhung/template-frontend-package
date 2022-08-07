@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.0.2] - 2022/08/07
+
+### Update
+
+- [x] Upgrade `composer.json`
+
 ## [1.0.1] - 2022/07/04
 
 ### Fixed
