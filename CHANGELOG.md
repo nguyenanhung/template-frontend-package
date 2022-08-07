@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.0.3] - 2022/08/07
+
+### Update
+
+- [x] Add method `Database::checkExitsRecord($wheres,$table)`
+
 ## [1.0.2] - 2022/08/07
 
 ### Update
