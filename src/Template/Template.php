@@ -19,14 +19,14 @@ class Template
     /**
      * Function getTemplatesPath
      *
-     * @author: 713uk13m <dev@nguyenanhung.com>
-     * @time  : 2018-12-15 03:18
-     *
-     * @return bool|string
+     * @return string
+     * @author   : 713uk13m <dev@nguyenanhung.com>
+     * @copyright: 713uk13m <dev@nguyenanhung.com>
+     * @time     : 28/02/2023 48:23
      */
     public static function getTemplatesPath()
     {
-        return realpath(__DIR__ . '/../templates');
+        return dirname(__DIR__) . '/templates';
     }
 
     /**
@@ -37,7 +37,7 @@ class Template
      *
      * @return string
      */
-    public static function getTemplatesExtension(): string
+    public static function getTemplatesExtension()
     {
         return '.html';
     }
@@ -56,12 +56,12 @@ class Template
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 16/06/2022 32:21
      */
-    public static function render(string $template = '', array $data = []): string
+    public static function render($template = '', $data = array())
     {
-        $templatesPath = realpath(__DIR__ . '/../../templates');
-        $loader        = new Twig_Loader_FilesystemLoader($templatesPath);
-        $twig          = new Twig_Environment($loader);
-        $templateFile  = $template . '.html';
+        $templatesPath = dirname(dirname(__DIR__)) . '/templates';
+        $loader = new Twig_Loader_FilesystemLoader($templatesPath);
+        $twig = new Twig_Environment($loader);
+        $templateFile = $template . '.html';
 
         return $twig->render($templateFile, $data);
     }
@@ -77,10 +77,10 @@ class Template
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 16/06/2022 33:42
      */
-    public static function nativeRender(string $template = '', array $data = []): string
+    public static function nativeRender($template = '', $data = array())
     {
-        $templatesPath = realpath(__DIR__ . '/../../templates');
-        $templates     = new League_Plates_Engine($templatesPath);
+        $templatesPath = dirname(dirname(__DIR__)) . '/templates';
+        $templates = new League_Plates_Engine($templatesPath);
 
         return $templates->render($template, $data);
     }

@@ -20,13 +20,13 @@ use nguyenanhung\Frontend\Your_Project\Helper\Helper;
  */
 class BaseCore
 {
-    const VERSION         = '1.0.0';
-    const KEY_DATABASE    = 'DATABASE';
-    const KEY_OPTIONS     = 'OPTIONS';
-    const KEY_AUTH        = 'AUTH';
-    const KEY_CONFIG      = 'CONFIG';
+    const VERSION = '1.0.0';
+    const KEY_DATABASE = 'DATABASE';
+    const KEY_OPTIONS = 'OPTIONS';
+    const KEY_AUTH = 'AUTH';
+    const KEY_CONFIG = 'CONFIG';
     const KEY_API_SERVICE = 'API_SERVICE';
-    const KEY_HANDLE      = 'HANDLE';
+    const KEY_HANDLE = 'HANDLE';
 
     /** @var \nguyenanhung\Frontend\Your_Project\Helper\Helper */
     protected $helper;
@@ -63,11 +63,11 @@ class BaseCore
      */
     public function __construct(array $options = array())
     {
-        $this->helper    = new Helper();
-        $this->logger    = new Logger();
+        $this->helper = new Helper();
+        $this->logger = new Logger();
         $this->benchmark = new Benchmark();
-        $this->requests  = new MyRequests();
-        $this->cache     = new Cache();
+        $this->requests = new MyRequests();
+        $this->cache = new Cache();
         if (isset($options['debugStatus']) && $options['debugStatus'] === true) {
             $this->logger->setDebugStatus(true);
             $this->cache->setDebugStatus(true);
@@ -109,7 +109,7 @@ class BaseCore
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 22/06/2022 40:11
      */
-    public function getVersion(): string
+    public function getVersion()
     {
         return self::VERSION;
     }
@@ -124,7 +124,7 @@ class BaseCore
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 22/06/2022 37:01
      */
-    public function setSdkConfig(array $sdkConfig): BaseCore
+    public function setSdkConfig(array $sdkConfig)
     {
         $this->sdkConfig = $sdkConfig;
         if (isset($this->db)) {
@@ -148,7 +148,7 @@ class BaseCore
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 22/06/2022 37:37
      */
-    public function setInputData($inputData): BaseCore
+    public function setInputData($inputData)
     {
         $this->inputData = $inputData;
         $this->logger->debug('InputData', 'Received Input Data: ', $this->inputData);
@@ -166,7 +166,7 @@ class BaseCore
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 22/06/2022 48:40
      */
-    public function setResponseIsObject(bool $responseIsObject): BaseCore
+    public function setResponseIsObject($responseIsObject)
     {
         $this->responseIsObject = $responseIsObject;
 
@@ -183,7 +183,7 @@ class BaseCore
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 22/06/2022 49:31
      */
-    public function setResponseIsJson(bool $responseIsJson): BaseCore
+    public function setResponseIsJson($responseIsJson)
     {
         $this->responseIsJson = $responseIsJson;
 
@@ -218,7 +218,7 @@ class BaseCore
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 02/07/2022 09:02
      */
-    public function responseToHtml(): string
+    public function responseToHtml()
     {
         return Template::nativeRender($this->response['templates'], $this->response);
     }
@@ -235,8 +235,8 @@ class BaseCore
     {
         if (is_array($this->response) || is_object($this->response)) {
             return json_encode($this->response);
-        } else {
-            return $this->response;
         }
+
+        return $this->response;
     }
 }

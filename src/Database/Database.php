@@ -44,7 +44,7 @@ class Database extends BaseCore
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 22/06/2022 38:16
      */
-    public function setDatabase($database): Database
+    public function setDatabase($database)
     {
         $this->database = $database;
 
@@ -59,12 +59,12 @@ class Database extends BaseCore
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 22/06/2022 40:58
      */
-    public function connection(): BaseModel
+    public function connection()
     {
-        $DB                      = new BaseModel();
-        $DB->debugStatus         = $this->options['debugStatus'];
-        $DB->debugLevel          = $this->options['debugLevel'];
-        $DB->debugLoggerPath     = $this->options['loggerPath'];
+        $DB = new BaseModel();
+        $DB->debugStatus = $this->options['debugStatus'];
+        $DB->debugLevel = $this->options['debugLevel'];
+        $DB->debugLoggerPath = $this->options['loggerPath'];
         $DB->debugLoggerFilename = 'Log-' . date('Y-m-d') . '.log';
         $DB->setDatabase($this->database);
         $DB->__construct($this->database);
@@ -83,7 +83,7 @@ class Database extends BaseCore
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 07/08/2022 17:45
      */
-    public function checkExitsRecord($wheres, $tableName): bool
+    public function checkExitsRecord($wheres, $tableName)
     {
         $DB = $this->connection();
         $DB->setTable($tableName);

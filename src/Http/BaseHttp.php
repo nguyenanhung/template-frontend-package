@@ -14,15 +14,15 @@ use nguyenanhung\Frontend\Your_Project\Database\Database;
  */
 class BaseHttp extends BaseCore
 {
-    const EXIT_CODE = [
+    const EXIT_CODE = array(
         'success'           => 0,
         'contentIsEmpty'    => 1,
         'invalidParams'     => 2,
         'invalidSignature'  => 3,
         'outdatedSignature' => 4,
         'invalidService'    => 5,
-        'paramsIsEmpty'     => 6,
-    ];
+        'paramsIsEmpty'     => 6
+    );
 
     /** @var \nguyenanhung\Frontend\Your_Project\Database\Database */
     protected $db;

@@ -25,56 +25,56 @@ class WebServiceAccount extends BaseHttp
         $this->logger->setLoggerSubPath(__CLASS__);
     }
 
-    public function register(): WebServiceAccount
+    public function register()
     {
-        $data           = [
+        $data = array(
             'code'        => self::EXIT_CODE['success'],
             'description' => 'Success'
-        ];
+        );
         $this->response = $data;
 
         return $this;
     }
 
-    public function login(): WebServiceAccount
+    public function login()
     {
-        $data           = [
+        $data = array(
             'code'        => self::EXIT_CODE['success'],
             'description' => 'Success'
-        ];
+        );
         $this->response = $data;
 
         return $this;
     }
 
-    public function logout(): WebServiceAccount
+    public function logout()
     {
-        $data           = [
+        $data = array(
             'code'        => self::EXIT_CODE['success'],
             'description' => 'Success'
-        ];
+        );
         $this->response = $data;
 
         return $this;
     }
 
-    public function updatePassword(): WebServiceAccount
+    public function updatePassword()
     {
-        $data           = [
+        $data = array(
             'code'        => self::EXIT_CODE['success'],
             'description' => 'Success'
-        ];
+        );
         $this->response = $data;
 
         return $this;
     }
 
-    public function forgotPassword(): WebServiceAccount
+    public function forgotPassword()
     {
-        $data           = [
+        $data = array(
             'code'        => self::EXIT_CODE['success'],
             'description' => 'Success'
-        ];
+        );
         $this->response = $data;
 
         return $this;

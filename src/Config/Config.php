@@ -11,14 +11,14 @@ namespace nguyenanhung\Frontend\Your_Project\Config;
  */
 class Config
 {
-    public static function configGlobal()
+    public static function init()
     {
         return DataRepository::getData('config_global');
     }
 
     public static function configItem($item)
     {
-        $config = self::configGlobal();
+        $config = self::init();
         if (isset($config[$item])) {
             return $config[$item];
         }
