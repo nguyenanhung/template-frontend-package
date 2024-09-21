@@ -1,4 +1,9 @@
-[![Latest Stable Version](http://poser.pugx.org/nguyenanhung/template-frontend-package/v)](https://packagist.org/packages/template-backend-package) [![Total Downloads](http://poser.pugx.org/nguyenanhung/template-frontend-package/downloads)](https://packagist.org/packages/nguyenanhung/template-frontend-package) [![Latest Unstable Version](http://poser.pugx.org/nguyenanhung/template-frontend-package/v/unstable)](https://packagist.org/packages/nguyenanhung/template-frontend-package) [![License](http://poser.pugx.org/nguyenanhung/template-frontend-package/license)](https://packagist.org/packages/nguyenanhung/template-frontend-package) [![PHP Version Require](http://poser.pugx.org/nguyenanhung/template-frontend-package/require/php)](https://packagist.org/packages/nguyenanhung/template-frontend-package)
+[![Latest Stable Version](https://img.shields.io/packagist/v/nguyenanhung/template-frontend-package.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/template-frontend-package)
+[![Total Downloads](https://img.shields.io/packagist/dt/nguyenanhung/template-frontend-package.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/template-frontend-package)
+[![Daily Downloads](https://img.shields.io/packagist/dd/nguyenanhung/template-frontend-package.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/template-frontend-package)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/nguyenanhung/template-frontend-package.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/template-frontend-package)
+[![License](https://img.shields.io/packagist/l/nguyenanhung/template-frontend-package.svg?style=flat-square)](https://packagist.org/packages/nguyenanhung/template-frontend-package)
+[![PHP Version Require](https://img.shields.io/packagist/dependency-v/nguyenanhung/template-frontend-package/php)](https://packagist.org/packages/nguyenanhung/template-frontend-package)
 
 # Template start Frontend Module Package
 
